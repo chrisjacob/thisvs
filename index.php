@@ -18,26 +18,26 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'development');
+	define('ENVIRONMENT', 'alpha');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
  *---------------------------------------------------------------
  *
  * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
+ * By default alpha will show errors but testing and live will hide them.
  */
 
 if (defined('ENVIRONMENT'))
 {
 	switch (ENVIRONMENT)
 	{
-		case 'development':
+		case 'alpha':
 			error_reporting(E_ALL);
 		break;
 	
-		case 'testing':
-		case 'production':
+		case 'beta':
+		case 'master':
 			error_reporting(0);
 		break;
 
